@@ -1,0 +1,16 @@
+.d-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    /* 格子中間間隔 ; grid-template-columns: repeat(8, 1fr) = 一排8格*/
+}
+
+.d-grid>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: blue;
+    color: white;
+    height: 50px;
+}
+/* d-grid>div = d-gird內的div */

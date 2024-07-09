@@ -1,0 +1,25 @@
+html , body {
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+.spring {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    margin: 50px auto;
+}
+
+.spring > span {
+    transform: rotate(135deg);
+}
+
+.spring:hover {
+    transform: rotate(720deg);
+    
+}

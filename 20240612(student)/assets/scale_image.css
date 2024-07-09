@@ -1,0 +1,20 @@
+.cover {
+    width: 100%;
+    height: 579px;
+    border: 2px dashed #dedede;
+    overflow: hidden;
+    /* 縮在框內 */
+}
+
+.cover img {
+    max-width: 100%;
+    height: auto;
+    transition: 1s;
+    /* 放大的效果 */
+}
+
+
+
+.cover:hover img {
+    transform: scale(2);
+}

@@ -1,0 +1,71 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 30px auto;
+}
+
+.grid .item {
+    height: 100px;
+    width: 100px;
+    border: 2px dashed #dedede;
+    position: relative;
+    /* 定位點 */
+}
+
+.grid .item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    background: blue;
+}
+
+.grid .item.x30::after {
+    left: calc(30px - 10px);
+}
+
+.grid .item.y30::after {
+    top: calc(30px - 10px);
+}
+
+.grid .item.mix::after {
+    left: unset;
+    top: unset;
+    right: -10px;
+    bottom: -10px;
+}
+
+.item .cube {
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 37, 37);
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.item.x30 .cube {
+    transform-origin: 30px;
+}
+
+.item.y30 .cube {
+    transform-origin: 50% 30px;
+}
+
+.item.mix .cube {
+    transform-origin: right bottom;
+}
+
+@keyframes move {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

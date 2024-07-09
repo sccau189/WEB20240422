@@ -1,0 +1,95 @@
+body ,html {
+    background: #000;
+    font-size: 16px;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.header-wrap {
+    background: #ffffff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 20px 15px;
+}
+
+.menu> ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+    font-size: 1.2rem;
+    /* 使用比例來縮放文字大小body,html內先規定本頁文字統一16px */
+    text-align: center;
+    padding: 0 10px;
+
+}
+
+.menu>ul a {
+    display: grid;
+    gap: 2px;
+}
+
+.menu .en {
+    font-size: 1.1rem;
+    font-family: "Poetsen One", sans-serif;
+}
+
+.menu .tw {
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.menu>ul a:hover {
+    color: rgb(74, 74, 202);
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+}
+
+#page-1 {
+    background-image: url(../assets/images/banner.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+#page-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000005b;
+    z-index: 1;
+}
+
+.page-wrap {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+
+}
+
+.page-content {
+    background: rgb(32, 31, 129);
+    height: 300px;
+}

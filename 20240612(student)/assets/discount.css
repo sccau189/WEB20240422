@@ -1,0 +1,57 @@
+.discount-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    /* grid-template-rows: minmax(最小多少px, 最大auto)*/
+    gap: 10px;
+}
+
+.discount-grid .item {
+    background-color: rgb(42, 42, 182);
+    padding: 10px;
+    color: #fff;
+}
+
+.cover {
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    /* 把特價條藏在框框內 */
+}
+
+.cover img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cover.s1 .discount {
+    position: absolute;
+    top: 16px;
+    right: -77px;
+    width: 100%;
+    height: 26px;
+    background: #ff0000;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+
+}
+
+.cover:not(.s1)::after {
+    content: 'off ' attr(data-discount) '%';
+    /* off % 固定 attr(data-discount)=內容變換  */
+    position: absolute;
+    top: 16px;
+    right: -77px;
+    width: 100%;
+    height: 26px;
+    background: #ff0000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+}

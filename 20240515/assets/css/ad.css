@@ -1,0 +1,67 @@
+.btn {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #dedede;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: #301999;
+    color: #fff;
+}
+
+.ad-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
+.ad-block::after {
+    content: '';
+    /* 必要屬性 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000073;
+}
+
+.ad-wrap {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.ad-close {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    color: red;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#ad-switch {
+    display: none;
+}
+
+#ad-switch:checked~.ad-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

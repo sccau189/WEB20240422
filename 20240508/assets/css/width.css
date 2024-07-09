@@ -1,0 +1,40 @@
+.w-block {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: #2c0db4;
+    overflow-wrap: normal;
+    margin-bottom: 20px;
+}
+
+.mw-block {
+    max-width: 100px;
+    height: 100px;
+    background-color: red;
+    color: #2c0db4;
+    overflow-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 200px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.profile-pic img {
+    max-width: 100%;
+}
+
+.article {
+    padding: 10px;
+    border: 1px solid #dedede;
+    line-height: 30px;
+    margin-bottom: 10px;
+    min-width: 200px;
+    display: inline-block;
+}
+
+.article.not {
+    min-width: unset
+}

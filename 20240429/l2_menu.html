@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兩層選單</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .header {
+            height: 80px;
+            background: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mu-menu {
+            display: flex;
+            gap: 30px;
+            height: 100%;
+            align-items: center;
+        }
+
+        .mu-menu>li {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .mu-menu>li>ul {
+            display: none;
+        }
+
+        .mu-menu>li:hover>ul {
+            display: block;
+            position: absolute;
+            top: 80px;
+            color: #fff;
+            background: #000;
+            min-width: 200px;
+        }
+
+        .mu-menu>li:hover>a span {
+            color: red;
+        }
+
+        .mu-menu>li:hover>ul>li {
+            padding: 15px;
+        }
+
+        .mu-menu>li:hover>ul>li:hover {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul class="mu-menu">
+            <li>
+                <a href="#">
+                    <span>選單1</span>
+                    <ul>
+                        <li>
+                            <a href="#">選單1-1</a>
+                        </li>
+                        <li>
+                            <a href="#">選單1-2</a>
+                        </li>
+                        <li>
+                            <a href="#">選單1-3</a>
+                        </li>
+                        <li>
+                            <a href="#">選單1-4</a>
+                        </li>
+                    </ul>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>選單2</span>
+                    <ul>
+                        <li>
+                            <a href="#">選單2-1</a>
+                        </li>
+                        <li>
+                            <a href="#">選單2-2</a>
+                        </li>
+                        <li>
+                            <a href="#">選單2-3</a>
+                        </li>
+                        <li>
+                            <a href="#">選單2-4</a>
+                        </li>
+                    </ul>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

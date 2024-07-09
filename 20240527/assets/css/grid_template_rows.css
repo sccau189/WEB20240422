@@ -1,0 +1,36 @@
+.grid-wrap {
+    display: grid;
+    width: 800px;
+    margin: 20px auto;
+    background: yellow;
+    color: #fff;
+    padding: 10px;
+    gap: 10px;
+}
+
+.grid-wrap>div {
+    padding: 10px;
+    height: 40px;
+    background: rgb(255, 73, 73);
+    height: 100%;
+}
+
+.grid-wrap.row-1 {
+    grid-template-rows: 200px 100px 200px;
+}
+
+.grid-wrap.row-2 {
+    grid-template-rows: 1fr 100px 200px;
+}
+
+.grid-wrap.row-3 {
+    grid-template-rows: repeat(3, 300px);
+}
+
+.grid-wrap.row-auto {
+    grid-auto-rows: 100px;
+}
+
+.grid-wrap.row-auto-minmax {
+    grid-auto-rows: minmax(100px, auto);
+}

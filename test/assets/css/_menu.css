@@ -1,0 +1,34 @@
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.menu li {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dedede;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu li:hover {
+    background-color: #eb8108;
+    color: #fff;
+}
+
+.menu li>ul {
+    position: absolute;
+    background: #dedede;
+    color: #000;
+    width: 100%;
+    top: 40px;
+    left: 0;
+    display: none;
+}
+
+.menu li:hover>ul {
+    display: block;
+}

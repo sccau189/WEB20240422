@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgb(49, 141, 216);
+            overflow: hidden;
+        }
+
+        .cloud {
+            width: 500px;
+            height: 120px;
+            border-radius: 1000px;
+            background: #fff;
+            position: absolute;
+            top: 200px;
+            left: 0;
+
+            animation-name: move;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+
+        .cloud::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            background: #fff;
+            top: -50px;
+            left: 100px;
+        }
+
+        .cloud::before {
+            content: '';
+            position: absolute;
+            width: 230px;
+            height: 200px;
+            border-radius: 300px;
+            background: #fff;
+            top: -100px;
+            left: 190px;
+        }
+
+        .xl {
+            transform: scale(1.2);
+        }
+
+        .small {
+            transform: scale(0.5);
+        }
+
+        @keyframes move {
+            from {
+                margin-left: 0;
+            }
+
+            to {
+                margin-left: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cloud" style="top: 200px; animation-duration: 5s"></div>
+    <div class="cloud xl" style="top: 600px"></div>
+    <div class="cloud small" style="top: 850px; animation-duration: 3s"></div>
+</body>
+
+</html>

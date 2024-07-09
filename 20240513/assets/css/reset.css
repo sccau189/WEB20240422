@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.slogan {
+    padding: 15px 0;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}

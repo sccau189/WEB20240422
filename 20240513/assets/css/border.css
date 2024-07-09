@@ -1,0 +1,23 @@
+.border-wrap {
+    width: 100px;
+    height: 100px;
+    background: #dedede;
+    border: 1px solid #000;
+    border-width: 3px;
+    /* border-style: solid;
+    border-color: #000;
+    border-top-width: 0;
+    border-bottom-style: dashed;
+    border-left-color: red; */
+
+    /* border-radius: 10px; */
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 100px;
+}

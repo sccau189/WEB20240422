@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table nth-child</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/table.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="slogan">學生資料表</h1>
+        <div class="total">筆數: <span id="total-num">0</span></div>
+        <table id="student-table">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>分數</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>學生1</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>學生1</td>
+                    <td>80</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<script>
+    let table = document.querySelector('#student-table')
+    let students = '';
+    let total = Math.round(Math.random() * 100) + 1;
+    let counter = 0;
+    for (let i = 1; i <= total; i++) {
+        let num = Math.round(Math.random() * 100);
+        counter += num;
+        students += `<tr><td>學生${i}</td><td>${num}</td></tr>`
+    }
+
+    students += `<tr><td>總分數</td><td>${counter}</td></tr>`;
+
+    table.querySelector('tbody').innerHTML = students
+
+    let totalNum = document.querySelector('#total-num');
+    totalNum.innerHTML = total
+</script>
+
+</html>

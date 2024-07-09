@@ -1,0 +1,87 @@
+.fn {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.fn button {
+    padding: 10px 20px;
+    border: 0;
+    background: #1145b6;
+    color: #fff;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.wrap {
+    display: grid;
+    gap: 10px;
+}
+
+.wrap .item {
+    width: 200px;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap.active .item {
+    animation-name: run;
+    animation-duration: 5s;
+}
+
+.wrap .item.linear {
+    animation-timing-function: linear;
+}
+
+.wrap .item.ease {
+    animation-timing-function: ease;
+}
+
+.wrap .item.ease-in {
+    animation-timing-function: ease-in;
+}
+
+.wrap .item.ease-out {
+    animation-timing-function: ease-out;
+}
+
+.wrap .item.ease-in-out {
+    animation-timing-function: ease-in-out;
+}
+
+.wrap .item.cubic {
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.wrap .item.steps {
+    animation-timing-function: steps(3, start);
+}
+
+.wrap .item.step-start {
+    animation-timing-function: step-start;
+}
+
+.wrap .item.step-end {
+    animation-timing-function: step-end;
+}
+
+.wrap .item.initial {
+    animation-timing-function: initial;
+}
+
+.wrap .item.inherit {
+    animation-timing-function: inherit;
+}
+
+@keyframes run {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(300px);
+    }
+}

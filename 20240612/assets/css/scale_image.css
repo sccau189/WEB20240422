@@ -1,0 +1,19 @@
+.cover {
+    width: 100%;
+    height: 579px;
+    border: 2px dashed #dedede;
+    overflow: hidden;
+}
+
+.cover img {
+    max-width: 100%;
+    height: auto;
+    transition: 1s;
+    transform: scale(1);
+}
+
+
+
+.cover:hover img {
+    transform: scale(2);
+}

@@ -1,0 +1,63 @@
+.wrap {
+    display: grid;
+    gap: 10px;
+}
+
+.fn {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.fn button {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 4px;
+    background: rgb(25, 91, 190);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fn button:hover {
+    background: rgb(15, 65, 139);
+}
+
+
+.item {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    color: #fff;
+    transition-duration: 5s;
+}
+
+.wrap.active .item {
+    width: 600px;
+}
+
+.item.linear {
+    transition-timing-function: linear;
+}
+
+.item.ease {
+    transition-timing-function: ease;
+}
+
+.item.ease-in {
+    transition-timing-function: ease-in;
+}
+
+.item.ease-out {
+    transition-timing-function: ease-out;
+}
+
+.item.ease-in-out {
+    transition-timing-function: ease-in-out;
+}
+
+.item.cubic {
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}

@@ -1,0 +1,14 @@
+.wrap .item {
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: red;
+}
+
+.wrap .sp {
+    background: blue;
+}
+
+.wrap .sp+.item {
+    font-size: 50px;
+}

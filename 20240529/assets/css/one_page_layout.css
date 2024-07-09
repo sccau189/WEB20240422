@@ -1,0 +1,243 @@
+html,
+body {
+    background: #000;
+    font-size: 16px;
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.header-wrap {
+    background: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 20px 15px;
+}
+
+.menu>ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.menu>ul a {
+    display: grid;
+    gap: 2px;
+    text-align: center;
+}
+
+.menu .en {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.menu .tw {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.menu>ul a:hover {
+    color: rgb(16, 77, 209);
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+}
+
+#page-1 {
+    background-image: url(../images/banner.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+#page-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000079;
+    z-index: 1;
+}
+
+.page-wrap {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.page-content {
+    background: #162f4ac4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+}
+
+.slogan {
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.slogan::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 150px);
+    width: 0;
+    height: 3px;
+    border-left: 100px solid #4242ff;
+    border-right: 200px solid #fff;
+}
+
+.slogan2 {
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #fff;
+    border-image: linear-gradient(to right, #4242ff 30%, #fff 0%) 1;
+    margin-bottom: 15px;
+}
+
+.page-content>div {
+    min-height: 300px;
+    position: relative;
+}
+
+/* .page-content>div:first-child {
+    border-right: 3px dashed #fff;
+    padding-right: 30px;
+} */
+
+.page-content>div:first-child {
+    padding-right: 30px;
+}
+
+.page-content>div:first-child::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    /** height 剩餘數值一半 */
+    top: 5%;
+    height: 90%;
+    /** border-left-width 數值一半 */
+    right: -2px;
+    border-left: 4px dashed #fff;
+}
+
+.page-content>div:last-child {
+    padding-left: 30px;
+}
+
+.page-content .text {
+    line-height: 30px;
+    text-align: justify;
+}
+
+.form-item {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-item input {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    padding: 0 60px;
+}
+
+.form-item label {
+    position: absolute;
+    color: #535353;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.form-item-good {
+    height: 40px;
+    width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 0 10px;
+    gap: 5px;
+}
+
+.form-item-good label {
+    color: #535353;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.form-item-good input {
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #000;
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.form-fn {
+    text-align: right;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    background: #dedede;
+    cursor: pointer;
+}
+
+.btn.success {
+    background: rgb(14, 172, 85);
+    color: #fff;
+}
+
+.btn.success:hover {
+    background: rgb(26, 204, 106);
+}
+
+.form-wrap {
+    margin-top: 25px;
+}

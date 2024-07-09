@@ -1,0 +1,42 @@
+#student-table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#student-table th,
+#student-table td {
+    border: 1px solid #666;
+    padding: 10px;
+}
+
+#student-table th {
+    background: #1d3ead;
+    color: #fff;
+}
+
+/** 單數列 **/
+#student-table tbody tr:nth-child(odd) td {
+    background: #d0f8bd;
+}
+
+/** 單數列 **/
+#student-table tbody tr:nth-child(even) td {
+    background: #dedede;
+}
+
+#student-table tbody td:last-child {
+    text-align: right;
+}
+
+#student-table tbody tr:last-child td {
+    background: #000;
+    color: #fff;
+}
+
+.total {
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 14px;
+}

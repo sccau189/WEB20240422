@@ -1,0 +1,14 @@
+.d-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px
+}
+
+.d-grid>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    color: #fff;
+    height: 50px;
+}

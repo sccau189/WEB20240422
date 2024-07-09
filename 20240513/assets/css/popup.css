@@ -1,0 +1,49 @@
+.popup {
+    padding: 10px;
+    border: 1px solid #050d3b;
+    border-radius: 4px;
+    margin: 20px auto;
+    background-color: #0026ff;
+    color: #fff;
+    display: none;
+}
+
+#popup-switch {
+    display: none;
+}
+
+#popup-switch:checked~.popup {
+    display: block;
+}
+
+#popup-switch:checked+label {
+    display: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 0;
+    background: #0fad71;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background: #24e69c
+}
+
+.close {
+    margin: 20px auto;
+    text-align: right;
+}
+
+.close .btn {
+    background-color: red;
+}
+
+.close .btn:hover {
+    background-color: rgb(247, 42, 42);
+}

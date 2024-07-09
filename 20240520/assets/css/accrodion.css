@@ -1,0 +1,89 @@
+html,
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.zh-tw {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.en {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sub-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* .accrodion-wrap {
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #505050;
+} */
+
+.accrodion-wrap .accrodion-item {
+    margin-bottom: 5px;
+}
+
+.accrodion-wrap .accrodion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1a63b6;
+    color: #fff;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 8px;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.accrodion-wrap .accrodion-body {
+    padding: 10px;
+    border: 1px solid #1a63b6;
+    display: none;
+}
+
+.accrodion-wrap .accrodion-to-close {
+    display: none;
+}
+
+.accrodion-wrap .accrodion-switch {
+    display: none;
+}
+
+.accrodion-wrap .accrodion-switch:checked~.accrodion-header .accrodion-to-open {
+    display: none;
+}
+
+.accrodion-wrap .accrodion-switch:checked~.accrodion-header .accrodion-to-close {
+    display: block;
+}
+
+.accrodion-wrap .accrodion-switch:checked~.accrodion-body {
+    display: block;
+}
+
+
+.accrodion-wrap .accrodion-switch:checked~.accrodion-header {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.accrodion-wrap .accrodion-switch:checked~.accrodion-body {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}

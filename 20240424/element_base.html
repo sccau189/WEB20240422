@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素標籤</title>
+    <style>
+        #first-student {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="first-student" class="student">
+        First Student
+    </div>
+
+    <div id="first student" class="student">
+        First Student
+    </div>
+
+    <div id="aaa">
+        aaa
+    </div>
+
+    <div id="bbb" id="ccc">錯誤</div>
+
+    <div id="bbb ccc">同時擁有 bbb ccc</div>
+
+    <!-- 不允許輸入內容的標籤不用關閉 -->
+    <img src="some.png" alt="">
+
+    <!-- <img src="some.png" alt=""></img> Error -->
+</body>
+
+</html>

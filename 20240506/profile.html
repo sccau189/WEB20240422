@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            height: 100%;
+            margin: auto;
+            position: relative;
+            padding: 0 15px;
+        }
+
+        #my-picture {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 300px;
+            margin: 15px auto;
+            background: #b4c7ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            overflow: hidden;
+            color: #031341;
+            box-shadow: 0 0 2px 1px #031341;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #my-picture label {
+            cursor: pointer;
+            position: relative;
+            left: -100%;
+            transition: 0.3s;
+        }
+
+        #my-picture:hover label {
+            left: 0;
+        }
+
+        #pic-choice {
+            display: none;
+        }
+
+
+        #my-picture.active {
+            box-shadow: 0 -9px 2px 1px #c2351c;
+            animation-name: run;
+            animation-duration: 0.6s;
+            animation-iteration-count: infinite;
+        }
+
+        #my-picture.active label {
+            display: none;
+        }
+
+        @keyframes run {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div id="my-picture">
+                <label for="pic-choice">上傳圖片</label>
+                <input type="file" id="pic-choice" accept="image/*">
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    const reader = (file) => {
+        return new Promise((resolve, reject) => {
+            let reader = new FileReader();
+            reader.onload = () => {
+                let data = {
+                    result: reader.result,
+                    name: file.name,
+                    size: file.size,
+                    type: file.type,
+                }
+                resolve(data);
+            }
+
+            reader.readAsDataURL(file);
+        })
+    }
+
+    let choice = document.querySelector('#pic-choice');
+    let pic = document.querySelector('#my-picture');
+
+    choice.addEventListener('change', async () => {
+        let file = choice.files[0];
+        if (file) {
+            pic.classList.add('active');
+            let data = await reader(file);
+            pic.style.backgroundImage = `url(${data.result})`;
+            pic.classList.remove('active');
+        }
+    })
+</script>
+
+</html>

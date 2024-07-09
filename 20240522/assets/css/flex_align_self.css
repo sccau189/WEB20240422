@@ -1,0 +1,28 @@
+.flex-wrap {
+    display: flex;
+    width: 800px;
+    margin: 20px auto;
+    background: yellow;
+    height: 400px;
+    gap: 10px;
+}
+
+.flex-wrap>div {
+    width: 100px;
+    align-items: stretch;
+    display: flex;
+    background: #000;
+    color: #fff;
+}
+
+.flex-wrap>div:first-child {
+    padding-top: 20px;
+}
+
+.flex-wrap.baseline {
+    align-items: baseline;
+}
+
+.flex-wrap.baseline .self {
+    align-self: flex-start;
+}

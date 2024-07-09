@@ -1,0 +1,38 @@
+.container {
+    max-width: 800px;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.slogan {
+    padding: 15px 0;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content-box-mode {
+    box-sizing: content-box;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 2px;
+    margin: 20px;
+    background: #dedede;
+}
+
+.border-box-mode {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 2px;
+    margin: 20px;
+    background: #dedede;
+}

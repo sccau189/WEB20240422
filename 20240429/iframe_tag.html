@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 40px;
+            margin: 15px auto;
+        }
+
+        .map-wrap {
+            margin-bottom: 20px;
+        }
+
+        .map-wrap iframe {
+            width: 100%;
+        }
+
+        .yt-wrap {
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">聯絡我們</h1>
+    <div class="map-wrap">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.4131762040997!2d120.66118968666713!3d24.157238317343424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d78069134cb%3A0xf7a65bba8f974f36!2z5ZyL56uL6Ieq54S256eR5a245Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1714389902266!5m2!1szh-TW!2stw"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="yt-wrap">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/33hE0Z0iNys?si=melYgeH9EiGgzt8u"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</body>
+
+</html>

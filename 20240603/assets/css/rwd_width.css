@@ -1,0 +1,23 @@
+.block {
+    background: red;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .block {
+        background: blue;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .block {
+        background: yellow;
+        color: red;
+    }
+}

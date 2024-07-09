@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radio</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- good -->
+    <form action="https://book.niceinfos.com/api/form/" method="GET">
+        <div>
+            <input type="radio" name="gender" value="male" id="gender-male" />
+            <label for="gender-male">男</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="female" id="gender-female" />
+            <label for="gender-female">女</label>
+        </div>
+        <div>
+            <button>發送</button>
+        </div>
+    </form>
+
+    <!-- bad -->
+    <form action="https://book.niceinfos.com/api/form/" method="GET">
+        <div>
+            <input type="radio" name="gender-male" value="male" id="gender-male-bad" />
+            <label for="gender-male-bad">男</label>
+        </div>
+        <div>
+            <input type="radio" name="gender-female" value="female" id="gender-female-bad" />
+            <label for="gender-female-bad">女</label>
+        </div>
+        <div>
+            <button>發送</button>
+        </div>
+    </form>
+</body>
+
+</html>

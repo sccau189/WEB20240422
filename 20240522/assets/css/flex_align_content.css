@@ -1,0 +1,49 @@
+h2.title {
+    margin: 10px auto;
+}
+
+
+.flex-wrap {
+    display: flex;
+    margin: 20px auto;
+    background: rgb(255, 115, 0);
+    height: 700px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.flex-wrap>div {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    background: #000;
+    color: #fff;
+}
+
+.flex-wrap>div:first-child {
+    padding-top: 20px;
+}
+
+.flex-wrap.start {
+    align-content: flex-start;
+}
+
+.flex-wrap.center {
+    align-content: center;
+}
+
+.flex-wrap.end {
+    align-content: flex-end;
+}
+
+.flex-wrap.sa {
+    align-content: space-around;
+}
+
+.flex-wrap.sb {
+    align-content: space-between;
+}
+
+.flex-wrap.se {
+    align-content: space-evenly;
+}

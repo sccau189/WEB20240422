@@ -1,0 +1,49 @@
+h2.title {
+    margin: 10px auto;
+}
+
+
+.flex-wrap {
+    display: flex;
+    width: 800px;
+    margin: 20px auto;
+    background: yellow;
+    height: 400px;
+    gap: 10px;
+}
+
+.flex-wrap>div {
+    width: 100px;
+    align-items: stretch;
+    display: flex;
+    background: #000;
+    color: #fff;
+}
+
+.flex-wrap>div:first-child {
+    padding-top: 20px;
+}
+
+.flex-wrap.custom-h>div {
+    height: 100px;
+}
+
+.flex-wrap.custom-h>div:nth-child(2) {
+    height: 200px;
+}
+
+.flex-wrap.start {
+    align-items: flex-start;
+}
+
+.flex-wrap.center {
+    align-items: center;
+}
+
+.flex-wrap.end {
+    align-items: flex-end;
+}
+
+.flex-wrap.baseline {
+    align-items: baseline;
+}

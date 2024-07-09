@@ -1,0 +1,49 @@
+.d-block {
+    display: block;
+    background: red;
+    color: #fff;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.d-inline {
+    display: inline;
+    background: blue;
+    color: #fff;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.d-inline-block {
+    display: inline-block;
+    background: green;
+    color: #fff;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.d-flex {
+    display: flex;
+    background: red;
+    color: #fff;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-inline-flex {
+    display: inline-flex;
+    background: blue;
+    color: #fff;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,41 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table th,
+.table td {
+    border: 1px solid #1452c5;
+    padding: 10px;
+}
+
+.table th {
+    background: #1452c5;
+    color: #fff;
+}
+
+.print-wrap {
+    margin: 10px auto;
+    text-align: right;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: 0;
+    background: #1452c5;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0f3e96;
+}
+
+@media print {
+    .print-wrap {
+        display: none;
+    }
+}

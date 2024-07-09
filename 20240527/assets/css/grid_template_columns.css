@@ -1,0 +1,41 @@
+.grid-wrap {
+    display: grid;
+    width: 800px;
+    margin: 20px auto;
+    background: rgb(23, 66, 206);
+    color: #fff;
+    padding: 10px;
+    gap: 10px;
+}
+
+/** 使用margin-bottom 區隔距離，須留意最後一個要取消距離 **/
+/* .grid-wrap.mb {
+    gap: 0;
+}
+
+.grid-wrap.mb>div {
+    margin-bottom: 10px;
+}
+
+.grid-wrap.mb>div:last-child {
+    margin-bottom: 0;
+} */
+
+.grid-wrap>div {
+    padding: 10px;
+    height: 40px;
+    background: rgb(255, 73, 73);
+}
+
+.grid-wrap.col-1 {
+    grid-template-columns: 200px 100px 200px;
+}
+
+.grid-wrap.col-2 {
+    grid-template-columns: 1fr 100px 200px;
+}
+
+.grid-wrap.col-3 {
+    grid-template-columns: repeat(5, 1fr) 500px;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+}

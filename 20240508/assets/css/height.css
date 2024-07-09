@@ -1,0 +1,29 @@
+.one-page {
+    height: 80vh;
+    background: red;
+}
+
+
+.profile-pic {
+    width: 100%;
+    height: 100vh;
+    background-color: #00000017;
+}
+
+.article {
+    padding: 10px;
+    border: 1px solid #dedede;
+    line-height: 30px;
+    margin-bottom: 10px;
+    min-width: 200px;
+    display: inline-block;
+}
+
+.align {
+    width: 200px;
+    height: 200px;
+    background: yellow;
+    color: #ff0505;
+    text-align: center;
+    line-height: 200px;
+}

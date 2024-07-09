@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select tag multiple attribute</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            height: 100%;
+            position: relative;
+            margin: auto;
+            padding: 0 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>錯誤</h2>
+        <form action="https://book.niceinfos.com/api/form/">
+            <select name="county" multiple>
+                <option value="">請選擇縣市</option>
+                <option value="TP">台北</option>
+                <option value="台中">台中</option>
+                <option>高雄</option>
+            </select>
+            <button>送出</button>
+        </form>
+        <h2>正確</h2>
+        <form action="https://book.niceinfos.com/api/form/">
+            <select name="county[]" multiple>
+                <option value="">請選擇縣市</option>
+                <option value="TP">台北</option>
+                <option value="台中">台中</option>
+                <option>高雄</option>
+            </select>
+            <button>送出</button>
+        </form>
+    </div>
+</body>
+
+</html>

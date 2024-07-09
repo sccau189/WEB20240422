@@ -1,0 +1,66 @@
+.button-group {
+    margin-bottom: 20px;
+}
+
+/* 後代選擇器 */
+.btn .primary {
+    background: #1b34be;
+    color: #f0f0f0;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+
+
+    background: #666666;
+    color: #f0f0f0;
+}
+
+.btn:hover {
+    background: #3a3a3a;
+    color: #f0f0f0;
+}
+
+/* 複合選擇器 */
+.btn.primary {
+    background: #1b34be;
+    color: #f0f0f0;
+}
+
+.btn.primary:hover {
+    background: #14278f;
+    color: #f0f0f0;
+}
+
+.btn.success {
+    background: #1bbe8d;
+    color: #f0f0f0;
+}
+
+.btn.success:hover {
+    background: #128865;
+    color: #f0f0f0;
+}
+
+.btn.danger {
+    background: #be1b44;
+    color: #f0f0f0;
+}
+
+.btn.danger:hover {
+    background: #961435;
+    color: #f0f0f0;
+}
+
+.btn.dark {
+    background: #272727;
+    color: #f0f0f0;
+}
+
+.btn.dark:hover {
+    background: #070707;
+    color: #f0f0f0;
+}

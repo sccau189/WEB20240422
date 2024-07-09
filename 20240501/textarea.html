@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textarea</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+            position: relative;
+        }
+
+        .slogan {
+            margin-bottom: 20px;
+        }
+
+        .form-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-item label {
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .form-item input {
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            font-size: 18px;
+            outline: 0;
+            border: 1px solid #dedede;
+        }
+
+        .form-item textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            font-size: 18px;
+            outline: 0;
+            border: 1px solid #dedede;
+            resize: none;
+        }
+
+        .send-wrap {
+            text-align: right;
+        }
+
+        .send-wrap button {
+            padding: 10px 20px;
+            border: 0;
+            background: #1863d3;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 6px;
+            letter-spacing: 1px;
+            font-weight: 700;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .send-wrap button:hover {
+            background: rgb(207, 31, 31);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="https://book.niceinfos.com/api/form/" method="GET">
+            <h1 class="slogan">聯絡我們</h1>
+            <div class="form-item">
+                <label for="name">姓名</label>
+                <input type="text" name="name" id="name" value="" placeholder="輸入姓名">
+            </div>
+            <div class="form-item">
+                <label for="email">信箱</label>
+                <input type="text" name="email" id="email" value="" placeholder="輸入信箱">
+            </div>
+            <div class="form-item">
+                <label for="mobile">手機</label>
+                <input type="text" name="name" id="mobile" value="" placeholder="輸入手機">
+            </div>
+            <div class="form-item">
+                <label for="content">內容</label>
+                <textarea name="content" id="content" placeholder="輸入內容"></textarea>
+            </div>
+            <div class="send-wrap">
+                <button>留言</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

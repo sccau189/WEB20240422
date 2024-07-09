@@ -1,0 +1,19 @@
+.article {
+    padding: 10px;
+    border: 1px solid #dedede;
+    line-height: 30px;
+    margin: 10px auto;
+    text-align: left;
+}
+
+.article.center {
+    text-align: center;
+}
+
+.article.right {
+    text-align: right;
+}
+
+.article.justify {
+    text-align: justify;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .accrodion {
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        .accrodion .tab-item {
+            border: 1px solid #2341e7ee;
+        }
+
+        .accrodion .tab-item .tab-title {
+            height: 50px;
+            background: #2341e7ee;
+            color: #fff;
+            font-size: 26px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .accrodion .tab-item .tab-title:hover {
+            background: #1329a7ee;
+        }
+
+        .accrodion .tab-item .tab-title::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        .accrodion .tab-item input:checked~.tab-title::after {
+            content: '-';
+        }
+
+        .accrodion .tab-item .tab-content {
+            padding: 10px;
+            display: none;
+        }
+
+        .accrodion .tab-item input:checked~.tab-content {
+            display: block;
+        }
+
+        .accrodion .tab-item input {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accrodion">
+        <div class="tab-item">
+            <input type="checkbox" id="tab-01" />
+            <label for="tab-01" class="tab-title">One</label>
+            <div class="tab-content">Hello 1</div>
+        </div>
+        <div class="tab-item">
+            <input type="checkbox" id="tab-02" />
+            <label for="tab-02" class="tab-title">Two</label>
+            <div class="tab-content">Hello 2</div>
+        </div>
+        <div class="tab-item">
+            <input type="checkbox" id="tab-03" />
+            <label for="tab-03" class="tab-title">Three</label>
+            <div class="tab-content">Hello 3</div>
+        </div>
+    </div>
+
+    <div class="accrodion">
+        <div class="tab-item">
+            <input type="radio" name="only" id="tab-only-01" />
+            <label for="tab-only-01" class="tab-title">One</label>
+            <div class="tab-content">Hello 1</div>
+        </div>
+        <div class="tab-item">
+            <input type="radio" name="only" id="tab-only-02" />
+            <label for="tab-only-02" class="tab-title">Two</label>
+            <div class="tab-content">Hello 2</div>
+        </div>
+        <div class="tab-item">
+            <input type="radio" name="only" id="tab-only-03" />
+            <label for="tab-only-03" class="tab-title">Three</label>
+            <div class="tab-content">Hello 3</div>
+        </div>
+    </div>
+</body>
+
+</html>

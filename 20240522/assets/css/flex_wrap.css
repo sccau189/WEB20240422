@@ -1,0 +1,40 @@
+h2.title {
+    margin: 10px auto;
+}
+
+.flex-wrap {
+    display: flex;
+    width: 200px;
+    margin: 20px auto;
+}
+
+.flex-wrap>div {
+    width: 100px;
+    height: 100px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.flex-wrap>div:nth-child(2) {
+    background: red;
+}
+
+.flex-wrap>div:nth-child(3) {
+    background: blue;
+}
+
+.flex-wrap>div:nth-child(4) {
+    background: green;
+}
+
+.flex-wrap.wrap {
+    flex-wrap: wrap;
+}
+
+.flex-wrap.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}

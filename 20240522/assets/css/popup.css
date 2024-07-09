@@ -1,0 +1,85 @@
+.popup-wrap {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 100vh;
+    background: #00000034;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.popup-wrap .popup-container {
+    background: #fff;
+    min-width: 300px;
+    min-height: 300px;
+    margin: 0 15px;
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.popup-wrap .popup-header {
+    margin: 10px 0;
+}
+
+.popup-wrap .popup-content {
+    border: 1px dashed #dedede;
+    padding: 5px;
+}
+
+.popup-wrap .popup-close-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: red;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: #6e6e6e;
+    color: #fff;
+}
+
+.btn:hover {
+    background: #4d4d4d;
+}
+
+.btn.primary {
+    background: #115fb9;
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background: #0b4180;
+}
+
+#popup-switch:checked~.popup-wrap {
+    display: flex;
+}
+
+#popup-switch {
+    display: none;
+}
+
+.close-text {
+    display: none;
+}
+
+#popup-switch:checked+label .open-text {
+    display: none;
+}
+
+#popup-switch:checked+label .close-text {
+    display: inline;
+}

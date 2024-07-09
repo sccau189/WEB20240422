@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition-timing-function</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/transition_timing_function.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="slogan">transition-timing-function</h1>
+        <div class="fn">
+            <button id="trigger">trigger</button>
+        </div>
+        <div class="wrap">
+            <div class="item linear">linear</div>
+            <div class="item ease">ease</div>
+            <div class="item ease-in">ease-in</div>
+            <div class="item ease-out">ease-out</div>
+            <div class="item ease-in-out">ease-in-out</div>
+            <div class="item cubic">cubic</div>
+        </div>
+    </div>
+</body>
+
+<script>
+    let btn = document.querySelector('#trigger');
+    let wrap = document.querySelector('.wrap');
+
+    btn.addEventListener('click', () => {
+        if (wrap.classList.contains('active')) {
+            wrap.classList.remove('active');
+        } else {
+            wrap.classList.add('active');
+        }
+    })
+</script>
+
+</html>

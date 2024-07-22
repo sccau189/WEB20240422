@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="./assets/css/todo.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TODO APP</h1>
+            <a href="#" id="current-uid"></a>
+        </div>
+        <div id="todo-app">
+            <div id="is-auth">
+                <div class="input-group">
+                    <input type="text" id="item-name" placeholder="輸入項目">
+                    <button id="add-btn">加入</button>
+                </div>
+                <div class="api-fn">
+                    <button id="upload-btn" class="api-btn">上傳數據</button>
+                    <button id="download-btn" class="api-btn">下載數據</button>
+                </div>
+                <div class="item-wrap">
+                    <ul id="todo-item">
+                        <!-- <li>
+                        <input type="checkbox" id="todo-item-1">
+                        <label for="todo-item-1">123</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="todo-item-2">
+                        <label for="todo-item-2">123</label>
+                    </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="./assets/js/todo.js"></script>
+
+</html>

@@ -1,8 +1,11 @@
+import { Storage } from "./Storage.js";
+
 const options = {
     data() {
         return {
             newItem: '',
             database: [],
+            uid: '',
         }
     },
     methods: {
@@ -16,27 +19,49 @@ const options = {
             })
             this.newItem = '';
             this.$refs.new_item.focus()
+            this.save();
+        },
+        async initUid() {
+            while (!this.uid) {
+                let result = await Swal.fire({
+                    title: '輸入 UID',
+                    input: 'text'
+                })
+
+                if (result.value) {
+                    this.uid = result.value;
+                }
+            }
+
+            Storage.setUid(this.uid);
+            this.load();
+        },
+        load() {
+            this.database = Storage.getData(this.uid);
+        },
+        save() {
+            Storage.setData(this.uid, this.database);
+        },
+        setChecked(item) {
+            // Call by reference.
+            console.log('reference!!!')
+            item.checked = !item.checked;
+            this.save();
+        },
+        setCheckedIndex(index) {
+            console.log('index!!!!');
+            this.database[index].checked = !this.database[index].checked;
+            this.save();
         }
     },
     mounted() {
         console.log('is mounted.');
-        this.database.push({
-            id: 1,
-            name: 'Test1',
-            checked: false
-        })
-
-        this.database.push({
-            id: 2,
-            name: 'Test2',
-            checked: true
-        })
-
-        this.database.push({
-            id: 3,
-            name: 'Test3',
-            checked: true
-        })
+        this.uid = Storage.getUid();
+        if (!this.uid) {
+            this.initUid();
+        } else {
+            this.load();
+        }
     }
 };
 

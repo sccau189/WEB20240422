@@ -1,4 +1,5 @@
 import { Storage } from "./Storage.js";
+import { API } from "./API.js";
 
 const options = {
     data() {

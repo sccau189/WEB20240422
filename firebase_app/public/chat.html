@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="chat-app">
         <div class="alert alert-info mb-2 mt-2">
             <h1>Chat App</h1>
         </div>
@@ -19,16 +19,22 @@
             <div data-role="A">A</div>
             <div data-role="B">B</div>
         </div> -->
-        <div class="d-flex align-items-center justify-content-between mb-2">
-            <div class="current-role on" id="current-role">
-                您現在的角色是: <span id="role-name"></span>
+        <div class="d-flex align-items-center justify-content-end mb-2">
+            <div>
+                <a href="#" class="badge bg-success me-2" @click.prevent="doCopyUID">{{ user.email }}</a>
             </div>
             <div>
-                <button class="btn btn-danger" id="signout-btn">登出</button>
+                <a href="#" class="badge bg-danger" @click.prevent="doLogout">登出</a>
             </div>
         </div>
 
-        <div class="border rounded mb-2" style="min-height: 300px;">
+        <div class="border rounded mb-2 p-2" style="min-height: 300px;">
+            <template v-for="(item, item_key) in messages">
+                <div class="d-flex mt-2">
+                    <span>{{ item.message }}</span>
+                    <small class="ms-2">{{ item.timer }}</small>
+                </div>
+            </template>
             <!-- <div class="receiver">
                     <span class="timestamp">11:00</span>
                     <span>Hello</span>
@@ -39,8 +45,9 @@
                 </div> -->
         </div>
         <div class="d-flex align-items-center">
-            <input type="text" class="form-control" placeholder="發送訊息">
-            <button class="btn btn-primary ms-2 pt-2">
+            <input type="text" class="form-control" placeholder="發送 UID" v-model="to">
+            <input type="text" class="form-control ms-2" placeholder="發送訊息" v-model="message">
+            <button class="btn btn-primary ms-2 pt-2" @click.prevent="doSend">
                 <span class="material-symbols-outlined">
                     send
                 </span>
